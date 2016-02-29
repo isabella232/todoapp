@@ -1,9 +1,9 @@
 <ion-view view-title="Done Todos">
   <ion-content class="padding">
 
-    <div class="list" ng-repeat="todo in todos">
+    <div class="list" ng-repeat="todo in todos" ng-show="!todo.done">
 
-      <div class="item item-button-right" ng-show="todo.done === true">
+      <div class="item item-button-right">
         {{todo.title}}
         <button class="button" ng-click="delete($index)">
           <i class="icon ion-trash-a"></i>
